@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+        <div class="card">
+            <div class="card-body">
+      <!-- Initial Frame -->
+      <form novalidate #feed="ngForm" (ngSubmit)="onSubmit(feed)">
+        <div style="border: 0px black solid; text-align: center" class="form-group">
+          
+          <h2 style="color: black">Register</h2>
+
+          <div class="form-group">
+            <label style="margin-right: 88%">Email<span style="color: red; font-size: 1.2em">*</span></label>
+            <input type="text" name="email" class="form-control" ngModel required minlength="10" placeholder="eg: apoorva.chauhan007@gmail.com">
+          </div>
+
+          <div class="form-group">
+            <label style="margin-right: 82%">Password<span style="color: red; font-size: 1.2em">*</span></label>
+            <input type="password" name="password" ngModel required class="form-control">
+          </div>
+          <input type="submit" class="btn btn-primary btn-block" value="Register" style="margin-right: 80%">
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

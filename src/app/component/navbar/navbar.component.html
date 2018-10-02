@@ -1,0 +1,30 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="#" routerLink="/">Home
+          <span class="sr-only">(current)</span>
+        </a>
+      </li>
+
+    </ul>
+  </div>
+  <ul class="nav justify-content-end">
+    <li *ngIf="isUserLoggedIn" class="nav-item active">
+      <a class="nav-link">Welcome {{ loggedInUser }}</a>
+    </li>
+    <li *ngIf="!isUserLoggedIn" class="nav-item active">
+      <a class="nav-link btn btn-link" (click)="onSignButtonClick()">Register</a>
+    </li>
+    <li *ngIf="!isUserLoggedIn" class="nav-item active">
+      <a class="nav-link btn btn-link" (click)="onLoginButtonClick()">Login</a>
+    </li>
+    <li *ngIf="isUserLoggedIn" class="nav-item active">
+      <a class="nav-link btn btn-link" (click)="onLogOutButtonClick()">Logout</a>
+    </li>
+
+    <!-- <input type="button" class="btn btn-light" (click)="onSignButtonClick()" value={{register}}>
+    <input type="button" class="btn btn-light" (click)="onLoginButtonClick()" value={{login}}> -->
+  </ul>
+</nav>
+<br><br>
